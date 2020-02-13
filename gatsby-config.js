@@ -1,0 +1,1 @@
+module.exports = require('./gatsby-ts')('./.gatsby/gatsby-config');

@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "target": "ES2015",
+    "module": "CommonJS",
+    "noEmit": true,
+    "declaration": false,
+    "importHelpers": true,
+    "incremental": true,
+    "resolveJsonModule": true
+  },
+  "include": [
+    ".gatsby/*.ts",
+  ],
+  "exclude": [
+    "src/**/*",
+    "node_modules/**/*",
+  ]
+}
