@@ -6,7 +6,9 @@
 
 // You can delete this file if you're not using it
 import { GatsbyBrowser } from 'gatsby';
+import React from 'react';
+import Layout from '../src/layouts/main';
 
-export = {
-    // Insert GatsbyBrowser endpoints here
-} as GatsbyBrowser;
+export const wrapPageElement: GatsbyBrowser['wrapPageElement'] = ({ element }) => (
+    <Layout>{element}</Layout>
+)

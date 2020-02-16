@@ -6,7 +6,9 @@
 
 // You can delete this file if you're not using it
 import { GatsbySSR } from 'gatsby';
+import React from 'react';
+import Layout from '../src/layouts/main';
 
-export = {
-    // Add endpoints here
-} as GatsbySSR;
+export const wrapPageElement: GatsbySSR['wrapPageElement'] = async ({ element }) => (
+    <Layout>{element}</Layout>
+)
