@@ -11,11 +11,7 @@ import { SiteTitleQuery } from '@/graphql-types';
 import Header from "~/components/header";
 import "./main.css";
 
-interface ILayoutProps {
-    children: React.ReactNodeArray;
-}
-
-const Layout: React.FC<ILayoutProps> = ({ children }) => {
+const Layout: React.FC = ({ children }) => {
     const data: SiteTitleQuery = useStaticQuery(graphql`
         query SiteTitle {
             site {
