@@ -39,7 +39,7 @@
     "@zerollup/ts-transform-paths": "^1.7.11",
     "gatsby-plugin-manifest": "^2.0.17",
     "gatsby-plugin-offline": "^2.0.23",
-    "gatsby-plugin-pnpm": "github:Js-Brecht/gatsby-plugin-pnpm#release-v1.2.0",
+    "gatsby-plugin-pnpm": "^1.2.2",
     "gatsby-plugin-react-helmet": "^3.0.6",
     "gatsby-plugin-sharp": "^2.0.20",
     "gatsby-plugin-ts": "^2.2.2",

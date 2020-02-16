@@ -13,7 +13,7 @@ devDependencies:
   '@zerollup/ts-transform-paths': 1.7.11_typescript@3.7.5
   gatsby-plugin-manifest: 2.2.38_gatsby@2.19.16
   gatsby-plugin-offline: 2.2.10_gatsby@2.19.16
-  gatsby-plugin-pnpm: github.com/Js-Brecht/gatsby-plugin-pnpm/d5147967223f2b14f1c9d6f9a75f1532acf5e2a6_gatsby@2.19.16
+  gatsby-plugin-pnpm: 1.2.2_gatsby@2.19.16
   gatsby-plugin-react-helmet: 3.1.21_cd80391e68a0f2e61c6ce7e5ac814552
   gatsby-plugin-sharp: 2.4.0_gatsby@2.19.16
   gatsby-plugin-ts: 2.2.2_gatsby@2.19.16+typescript@3.7.5
@@ -5492,6 +5492,14 @@ packages:
       gatsby: ^2.0.0
     resolution:
       integrity: sha512-jwY8LTOOobrKUr1ph+/IHAHDuzjSrXsAu2YBqZg7wc/J6gre0YAgOU2yAxY34CadE34jieISO3FDIyHMii3vPg==
+  /gatsby-plugin-pnpm/1.2.2_gatsby@2.19.16:
+    dependencies:
+      gatsby: 2.19.16_e952c98258ca016dac686d1f5d845607
+    dev: true
+    peerDependencies:
+      gatsby: ~2.x.x
+    resolution:
+      integrity: sha512-o+tZ+cSbCMyYRjQKzLRGgWqeJMkCIYjJlo8c3xooU3xNT2obHhF6sGSIkM8x+IPH0iv68xl+LQl1zPQ2e6ZNtw==
   /gatsby-plugin-react-helmet/3.1.21_cd80391e68a0f2e61c6ce7e5ac814552:
     dependencies:
       '@babel/runtime': 7.8.3
@@ -12413,17 +12421,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-PQ2PC7R9rslx84ndNBZB/Dkv8V8fZEpk83RLgXtYd0fwUgEjseMn1Dgajh2x6S8QbZAFa9p2qVCEuYZNgve0dQ==
-  github.com/Js-Brecht/gatsby-plugin-pnpm/d5147967223f2b14f1c9d6f9a75f1532acf5e2a6_gatsby@2.19.16:
-    dependencies:
-      gatsby: 2.19.16_e952c98258ca016dac686d1f5d845607
-    dev: true
-    id: github.com/Js-Brecht/gatsby-plugin-pnpm/d5147967223f2b14f1c9d6f9a75f1532acf5e2a6
-    name: gatsby-plugin-pnpm
-    peerDependencies:
-      gatsby: ~2.x.x
-    resolution:
-      tarball: 'https://codeload.github.com/Js-Brecht/gatsby-plugin-pnpm/tar.gz/d5147967223f2b14f1c9d6f9a75f1532acf5e2a6'
-    version: 1.2.0
 specifiers:
   '@types/node': ^13.5.0
   '@types/react': ^16.9.17
@@ -12435,7 +12432,7 @@ specifiers:
   gatsby-link: ^2.2.29
   gatsby-plugin-manifest: ^2.0.17
   gatsby-plugin-offline: ^2.0.23
-  gatsby-plugin-pnpm: 'github:Js-Brecht/gatsby-plugin-pnpm#release-v1.2.0'
+  gatsby-plugin-pnpm: ^1.2.2
   gatsby-plugin-react-helmet: ^3.0.6
   gatsby-plugin-sharp: ^2.0.20
   gatsby-plugin-ts: ^2.2.2
