@@ -2304,6 +2304,11 @@ export type StringQueryOperatorInput = {
   readonly glob: Maybe<Scalars['String']>,
 };
 
+export type StockImageQueryVariables = {};
+
+
+export type StockImageQuery = { readonly placeholderImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluidFragment> }> }> };
+
 export type SeoQueryVariables = {};
 
 
@@ -2313,11 +2318,6 @@ export type SiteTitleQueryVariables = {};
 
 
 export type SiteTitleQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title'>> }> };
-
-export type StockImageQueryVariables = {};
-
-
-export type StockImageQuery = { readonly placeholderImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluidFragment> }> }> };
 
 export type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 
