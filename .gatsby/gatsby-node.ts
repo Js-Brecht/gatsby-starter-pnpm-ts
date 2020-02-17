@@ -29,13 +29,13 @@ export = (projectRoot: string): GatsbyNode => {
             },
             getConfig
         }) => {
-            const config = getConfig();
-            if (config.optimization && config.optimization.minimizer) {
-                const minimizers = config.optimization.minimizer.slice(1);
-                config.optimization.minimizer = minimizers;
-                replaceWebpackConfig(config);
-            }
-            return;
+            // const config = getConfig();
+            // if (config.optimization && config.optimization.minimizer) {
+            //     const minimizers = config.optimization.minimizer.slice(1);
+            //     config.optimization.minimizer = minimizers;
+            //     replaceWebpackConfig(config);
+            // }
+            // return;
             //console.log(JSON.stringify(getConfig(), (key, val) => val instanceof RegExp ? val.toString() : typeof val === 'function' ? `Function ${val.name}()` : val, 3));
             if (process.env.NODE_ENV === 'development') {
                 setWebpackConfig({
