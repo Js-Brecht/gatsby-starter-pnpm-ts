@@ -29,14 +29,21 @@ export = (projectRoot: string): GatsbyNode => {
             },
             getConfig
         }) => {
-            // const config = getConfig();
-            // if (config.optimization && config.optimization.minimizer) {
-            //     const minimizers = config.optimization.minimizer.slice(1);
-            //     config.optimization.minimizer = minimizers;
-            //     replaceWebpackConfig(config);
-            // }
-            // return;
+            /** Change this variable to true to disable code minification */
+            const disableMinifictation = false;
+            if (disableMinifictation) {
+                const config = getConfig();
+                if (config.optimization && config.optimization.minimizer) {
+                    const minimizers = config.optimization.minimizer.slice(1);
+                    config.optimization.minimizer = minimizers;
+                    replaceWebpackConfig(config);
+                }
+            }
+
+            /** Uncomment this line if you want to see the webpack config echoed to your terminal */
             //console.log(JSON.stringify(getConfig(), (key, val) => val instanceof RegExp ? val.toString() : typeof val === 'function' ? `Function ${val.name}()` : val, 3));
+
+            /** Enable source maps during development for debugging purposes */
             if (process.env.NODE_ENV === 'development') {
                 setWebpackConfig({
                     // devtool: 'eval-source-map',
