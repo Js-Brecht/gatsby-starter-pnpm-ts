@@ -16,6 +16,6 @@ require('ts-node').register({
 });
 const tsNodeUtility = (configPath) => {
     return require(configPath)(__dirname);
-}
+};
 
 module.exports = tsNodeUtility;
