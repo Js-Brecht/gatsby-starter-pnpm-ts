@@ -60,10 +60,10 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 ├── .eslintrc.js
 ├── .gitignore
 ├── apollo.config.js
-├── gatsby-browser.js
+├── gatsby-browser.ts
 ├── gatsby-config.js
 ├── gatsby-node.js
-├── gatsby-ssr.js
+├── gatsby-ssr.ts
 ├── gatsby-ts.js
 ├── LICENSE
 ├── pnpm-lock.json
