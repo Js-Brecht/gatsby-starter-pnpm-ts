@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import Layout from '~/layouts/main';
+// import Layout from '~/layouts/main';
 import Image from '~/components/image';
 import SEO from '~/components/seo';
 
 const IndexPage: React.FC = () => (
-    <>
+    <React.Fragment>
         <SEO title="Home" />
         <h1>Hi people</h1>
         <p>Welcome to your new Gatsby site.</p>
@@ -15,7 +15,7 @@ const IndexPage: React.FC = () => (
             <Image />
         </div>
         <Link to="/page-2/">Go to page 2</Link>
-    </>
+    </React.Fragment>
 );
 
 export default IndexPage;

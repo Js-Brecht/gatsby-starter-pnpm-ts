@@ -23,6 +23,7 @@ type IGatsbyPluginOptions<TName extends string = string, TOptions extends Record
     options: TOptions;
 }
 
+// @ts-ignore
 export = (projectRoot: string): IGatsbyConfiguration<
     | IGatsbyPluginOptions<'gatsby-plugin-pnpm', IPnpmPluginOptions>
     // Add additional plugin types here
@@ -40,7 +41,25 @@ export = (projectRoot: string): IGatsbyConfiguration<
                 projectPath: projectRoot,
             }
         },
-        `gatsby-plugin-ts`,
+        {
+            resolve: `gatsby-plugin-typegen`,
+            options: {
+                outputPath: `${projectRoot}/.gatsby/graphql/types.ts`,
+                emitSchema: {
+                    [`${projectRoot}/.gatsby/graphql/introspection.json`]: true,
+                    [`${projectRoot}/.gatsby/graphql/schema.graphql`]: true,
+                },
+                emitPluginDocuments: {
+                    [`${projectRoot}/.gatsby/graphql/plugin-documents.graphql`]: true,
+                },
+            }
+        },
+        {
+            resolve: `gatsby-plugin-ts`,
+            options: {
+                codegen: false,
+            }
+        },
         `gatsby-plugin-tsconfig-paths`,
         `gatsby-plugin-react-helmet`,
         {

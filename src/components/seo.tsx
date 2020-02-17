@@ -8,7 +8,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
-import { SeoQuery } from '@/graphql-types';
+import { SeoQuery } from '@/graphql/types';
 
 interface ISEOProps {
     description?: string;
@@ -19,12 +19,12 @@ interface ISEOProps {
 
 const SEO: React.FC<ISEOProps> = ({ description = '', lang = 'en', meta = [], title }) => {
     const { site }: SeoQuery = useStaticQuery(graphql`
-        query SEO {
+        query Seo {
             site {
                 siteMetadata {
-                title
-                description
-                author
+                    title
+                    description
+                    author
                 }
             }
         }

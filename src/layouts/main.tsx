@@ -7,7 +7,7 @@
 
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import { SiteTitleQuery } from '@/graphql-types';
+import { SiteTitleQuery } from '@/graphql/types';
 import Header from "~/components/header";
 import "./main.css";
 
