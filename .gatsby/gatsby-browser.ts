@@ -5,4 +5,4 @@
  */
 
 // You can delete this file if you're not using it
-export { wrapPageElement } from './src/wrapPageElement';
+export { wrapPageElement } from '../src/wrapPageElement';

@@ -9,6 +9,8 @@ const namespace = require('./namespace');
 let tsNodeService;
 
 module.exports = (args) => {
+    console.log(JSON.stringify(args));
+
     const {
         configDir = process.cwd(),
         projectRoot = process.cwd(),
@@ -19,12 +21,22 @@ module.exports = (args) => {
     };
 
     const isProjectConfig = (fPath) => {
-        const checkPath = new RegExp(`^${path.join(configDir, `gatsby-(${gatsbyConfigs})\\.[jt]sx?`).replace(/([/\\])/, '\\$1')}$`);
+        const checkPath = new RegExp(`^${path.join(configDir, `gatsby-(${gatsbyConfigs}).tsx?`).replace(/([/\\.])/g, '\\$1')}$`);
         return checkPath.test(fPath);
     };
 
     tsNodeService = tsNode.register({
-        project: path.join(configDir, 'tsconfig.build.json'),
+        project: path.join(projectRoot, 'tsconfig.json'),
+        compilerOptions: {
+            module: "commonjs",
+            target: "es2015",
+            allowJs: true,
+            noEmit: true,
+            declaration: false,
+            importHelpers: true,
+            resolveJsonModule: true,
+            jsx: "preserve",
+        },
         files: true,
         readFile: (fPath) => {
             if (isProjectConfig(fPath)) {

@@ -30,7 +30,7 @@ export = (projectRoot: string): GatsbyNode => {
             getConfig
         }) => {
             /** Change this variable to true to disable code minification */
-            const disableMinifictation = false;
+            const disableMinifictation = true;
             if (disableMinifictation) {
                 const config = getConfig();
                 if (config.optimization && config.optimization.minimizer) {

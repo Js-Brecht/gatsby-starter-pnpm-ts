@@ -1,0 +1,1 @@
+module.exports = require(`${TS_CONFIG_DIR}/gatsby-browser`);
