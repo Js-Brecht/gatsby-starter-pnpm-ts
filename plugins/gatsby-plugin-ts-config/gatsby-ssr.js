@@ -1,1 +1,1 @@
-module.exports = require(`${TS_CONFIG_DIR}/gatsby-ssr`);
+module.exports = require(`${__TS_CONFIG_DIR}/gatsby-ssr`);

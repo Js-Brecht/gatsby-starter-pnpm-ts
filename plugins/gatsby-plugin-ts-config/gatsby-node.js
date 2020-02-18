@@ -10,8 +10,8 @@ const onCreateWebpackConfig = (args, options) => {
     setWebpackConfig({
         plugins: [
             new DefinePlugin({
-                TS_CONFIG_DIR: JSON.stringify(configDir),
-                TS_PROJECT_DIR: JSON.stringify(projectRoot),
+                __TS_CONFIG_DIR: JSON.stringify(configDir),
+                __TS_CONFIG_PROJECT_DIR: JSON.stringify(projectRoot),
             }),
         ],
     });

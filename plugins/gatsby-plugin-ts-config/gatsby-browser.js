@@ -1,1 +1,1 @@
-module.exports = require(`${TS_CONFIG_DIR}/gatsby-browser`);
+module.exports = require(`${__TS_CONFIG_DIR}/gatsby-browser`);
