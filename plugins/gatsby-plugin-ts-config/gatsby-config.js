@@ -61,6 +61,12 @@ module.exports = (args) => {
         return true;
     };
 
+    const ext = configDir === projectRoot ? '.ts' : '';
 
-    return require(path.join(configDir, 'gatsby-config'))(projectRoot);
+    try {
+        return require(path.join(configDir, `gatsby-config${ext}`))(projectRoot);
+    } catch (err) {
+        // No typescript config found, return nothing.
+        return;
+    }
 };
