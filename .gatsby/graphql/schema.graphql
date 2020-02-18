@@ -1727,6 +1727,8 @@ enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___theme_color
   pluginCreator___pluginOptions___display
   pluginCreator___pluginOptions___icon
+  pluginCreator___pluginOptions___projectRoot
+  pluginCreator___pluginOptions___configDir
   pluginCreator___pluginOptions___pathCheck
   pluginCreator___nodeAPIs
   pluginCreator___browserAPIs
@@ -1917,6 +1919,8 @@ enum SitePluginFieldsEnum {
   pluginOptions___theme_color
   pluginOptions___display
   pluginOptions___icon
+  pluginOptions___projectRoot
+  pluginOptions___configDir
   pluginOptions___pathCheck
   nodeAPIs
   browserAPIs
@@ -2045,6 +2049,8 @@ type SitePluginPluginOptions {
   theme_color: String
   display: String
   icon: String
+  projectRoot: String
+  configDir: String
   pathCheck: Boolean
 }
 
@@ -2081,6 +2087,8 @@ input SitePluginPluginOptionsFilterInput {
   theme_color: StringQueryOperatorInput
   display: StringQueryOperatorInput
   icon: StringQueryOperatorInput
+  projectRoot: StringQueryOperatorInput
+  configDir: StringQueryOperatorInput
   pathCheck: BooleanQueryOperatorInput
 }
 

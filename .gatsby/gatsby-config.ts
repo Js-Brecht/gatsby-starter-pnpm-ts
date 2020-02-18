@@ -1,3 +1,4 @@
+import * as path from 'path';
 import { GatsbyConfig } from 'gatsby';
 import { IPluginOptions as IPnpmPluginOptions } from 'gatsby-plugin-pnpm';
 
@@ -34,6 +35,7 @@ export = (projectRoot: string): IGatsbyConfiguration<
         author: `@js-brecht`,
     },
     plugins: [
+        // path.join(__dirname, 'gatsby-node'),
         {
             resolve: `gatsby-plugin-pnpm`,
             options: {

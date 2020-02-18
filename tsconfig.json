@@ -41,6 +41,6 @@
   },
   "include": [
     "src/**/*",
-    ".gatsby/**/*",
+    ".gatsby/**/*", "gatsby-ssr.ts", "gatsby-browser.ts",
   ]
 }
