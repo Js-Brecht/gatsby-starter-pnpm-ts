@@ -71,8 +71,6 @@ export type Directory = Node & {
   readonly ctime: Scalars['Date'],
   readonly birthtime: Maybe<Scalars['Date']>,
   readonly birthtimeMs: Maybe<Scalars['Float']>,
-  readonly blksize: Maybe<Scalars['Int']>,
-  readonly blocks: Maybe<Scalars['Int']>,
   readonly id: Scalars['ID'],
   readonly parent: Maybe<Node>,
   readonly children: ReadonlyArray<Node>,
@@ -194,8 +192,6 @@ export enum DirectoryFieldsEnum {
   ctime = 'ctime',
   birthtime = 'birthtime',
   birthtimeMs = 'birthtimeMs',
-  blksize = 'blksize',
-  blocks = 'blocks',
   id = 'id',
   parent___id = 'parent.id',
   parent___parent___id = 'parent.parent.id',
@@ -316,8 +312,6 @@ export type DirectoryFilterInput = {
   readonly ctime: Maybe<DateQueryOperatorInput>,
   readonly birthtime: Maybe<DateQueryOperatorInput>,
   readonly birthtimeMs: Maybe<FloatQueryOperatorInput>,
-  readonly blksize: Maybe<IntQueryOperatorInput>,
-  readonly blocks: Maybe<IntQueryOperatorInput>,
   readonly id: Maybe<StringQueryOperatorInput>,
   readonly parent: Maybe<NodeFilterInput>,
   readonly children: Maybe<NodeFilterListInput>,
@@ -376,8 +370,6 @@ export type File = Node & {
   readonly ctime: Scalars['Date'],
   readonly birthtime: Maybe<Scalars['Date']>,
   readonly birthtimeMs: Maybe<Scalars['Float']>,
-  readonly blksize: Maybe<Scalars['Int']>,
-  readonly blocks: Maybe<Scalars['Int']>,
   /** Copy file to static directory and return public url to it */
   readonly publicURL: Maybe<Scalars['String']>,
   readonly childImageSharp: Maybe<ImageSharp>,
@@ -502,8 +494,6 @@ export enum FileFieldsEnum {
   ctime = 'ctime',
   birthtime = 'birthtime',
   birthtimeMs = 'birthtimeMs',
-  blksize = 'blksize',
-  blocks = 'blocks',
   publicURL = 'publicURL',
   childImageSharp___fixed___base64 = 'childImageSharp.fixed.base64',
   childImageSharp___fixed___tracedSVG = 'childImageSharp.fixed.tracedSVG',
@@ -716,8 +706,6 @@ export type FileFilterInput = {
   readonly ctime: Maybe<DateQueryOperatorInput>,
   readonly birthtime: Maybe<DateQueryOperatorInput>,
   readonly birthtimeMs: Maybe<FloatQueryOperatorInput>,
-  readonly blksize: Maybe<IntQueryOperatorInput>,
-  readonly blocks: Maybe<IntQueryOperatorInput>,
   readonly publicURL: Maybe<StringQueryOperatorInput>,
   readonly childImageSharp: Maybe<ImageSharpFilterInput>,
   readonly id: Maybe<StringQueryOperatorInput>,
@@ -1379,8 +1367,6 @@ export type Query_fileArgs = {
   ctime: Maybe<DateQueryOperatorInput>,
   birthtime: Maybe<DateQueryOperatorInput>,
   birthtimeMs: Maybe<FloatQueryOperatorInput>,
-  blksize: Maybe<IntQueryOperatorInput>,
-  blocks: Maybe<IntQueryOperatorInput>,
   publicURL: Maybe<StringQueryOperatorInput>,
   childImageSharp: Maybe<ImageSharpFilterInput>,
   id: Maybe<StringQueryOperatorInput>,
@@ -1430,8 +1416,6 @@ export type Query_directoryArgs = {
   ctime: Maybe<DateQueryOperatorInput>,
   birthtime: Maybe<DateQueryOperatorInput>,
   birthtimeMs: Maybe<FloatQueryOperatorInput>,
-  blksize: Maybe<IntQueryOperatorInput>,
-  blocks: Maybe<IntQueryOperatorInput>,
   id: Maybe<StringQueryOperatorInput>,
   parent: Maybe<NodeFilterInput>,
   children: Maybe<NodeFilterListInput>,
@@ -1500,8 +1484,6 @@ export type Query_siteArgs = {
   children: Maybe<NodeFilterListInput>,
   internal: Maybe<InternalFilterInput>,
   siteMetadata: Maybe<SiteSiteMetadataFilterInput>,
-  port: Maybe<IntQueryOperatorInput>,
-  host: Maybe<StringQueryOperatorInput>,
   polyfill: Maybe<BooleanQueryOperatorInput>,
   pathPrefix: Maybe<StringQueryOperatorInput>,
   buildTime: Maybe<DateQueryOperatorInput>
@@ -1546,8 +1528,6 @@ export type Site = Node & {
   readonly children: ReadonlyArray<Node>,
   readonly internal: Internal,
   readonly siteMetadata: Maybe<SiteSiteMetadata>,
-  readonly port: Maybe<Scalars['Int']>,
-  readonly host: Maybe<Scalars['String']>,
   readonly polyfill: Maybe<Scalars['Boolean']>,
   readonly pathPrefix: Maybe<Scalars['String']>,
   readonly buildTime: Maybe<Scalars['Date']>,
@@ -1678,8 +1658,6 @@ export enum SiteFieldsEnum {
   siteMetadata___title = 'siteMetadata.title',
   siteMetadata___description = 'siteMetadata.description',
   siteMetadata___author = 'siteMetadata.author',
-  port = 'port',
-  host = 'host',
   polyfill = 'polyfill',
   pathPrefix = 'pathPrefix',
   buildTime = 'buildTime'
@@ -1691,8 +1669,6 @@ export type SiteFilterInput = {
   readonly children: Maybe<NodeFilterListInput>,
   readonly internal: Maybe<InternalFilterInput>,
   readonly siteMetadata: Maybe<SiteSiteMetadataFilterInput>,
-  readonly port: Maybe<IntQueryOperatorInput>,
-  readonly host: Maybe<StringQueryOperatorInput>,
   readonly polyfill: Maybe<BooleanQueryOperatorInput>,
   readonly pathPrefix: Maybe<StringQueryOperatorInput>,
   readonly buildTime: Maybe<DateQueryOperatorInput>,
@@ -1887,9 +1863,9 @@ export enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___strict = 'pluginCreator.pluginOptions.strict',
   pluginCreator___pluginOptions___projectPath = 'pluginCreator.pluginOptions.projectPath',
   pluginCreator___pluginOptions___outputPath = 'pluginCreator.pluginOptions.outputPath',
-  pluginCreator___pluginOptions___emitSchema____home_jeremy_dev_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_introspection_json = 'pluginCreator.pluginOptions.emitSchema._home_jeremy_dev_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_introspection_json',
-  pluginCreator___pluginOptions___emitSchema____home_jeremy_dev_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_schema_graphql = 'pluginCreator.pluginOptions.emitSchema._home_jeremy_dev_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_schema_graphql',
-  pluginCreator___pluginOptions___emitPluginDocuments____home_jeremy_dev_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_plugin_documents_graphql = 'pluginCreator.pluginOptions.emitPluginDocuments._home_jeremy_dev_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_plugin_documents_graphql',
+  pluginCreator___pluginOptions___emitSchema___D__dev_source_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_introspection_json = 'pluginCreator.pluginOptions.emitSchema.D__dev_source_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_introspection_json',
+  pluginCreator___pluginOptions___emitSchema___D__dev_source_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_schema_graphql = 'pluginCreator.pluginOptions.emitSchema.D__dev_source_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_schema_graphql',
+  pluginCreator___pluginOptions___emitPluginDocuments___D__dev_source_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_plugin_documents_graphql = 'pluginCreator.pluginOptions.emitPluginDocuments.D__dev_source_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_plugin_documents_graphql',
   pluginCreator___pluginOptions___codegen = 'pluginCreator.pluginOptions.codegen',
   pluginCreator___pluginOptions___name = 'pluginCreator.pluginOptions.name',
   pluginCreator___pluginOptions___path = 'pluginCreator.pluginOptions.path',
@@ -2091,9 +2067,9 @@ export enum SitePluginFieldsEnum {
   pluginOptions___strict = 'pluginOptions.strict',
   pluginOptions___projectPath = 'pluginOptions.projectPath',
   pluginOptions___outputPath = 'pluginOptions.outputPath',
-  pluginOptions___emitSchema____home_jeremy_dev_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_introspection_json = 'pluginOptions.emitSchema._home_jeremy_dev_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_introspection_json',
-  pluginOptions___emitSchema____home_jeremy_dev_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_schema_graphql = 'pluginOptions.emitSchema._home_jeremy_dev_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_schema_graphql',
-  pluginOptions___emitPluginDocuments____home_jeremy_dev_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_plugin_documents_graphql = 'pluginOptions.emitPluginDocuments._home_jeremy_dev_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_plugin_documents_graphql',
+  pluginOptions___emitSchema___D__dev_source_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_introspection_json = 'pluginOptions.emitSchema.D__dev_source_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_introspection_json',
+  pluginOptions___emitSchema___D__dev_source_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_schema_graphql = 'pluginOptions.emitSchema.D__dev_source_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_schema_graphql',
+  pluginOptions___emitPluginDocuments___D__dev_source_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_plugin_documents_graphql = 'pluginOptions.emitPluginDocuments.D__dev_source_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_plugin_documents_graphql',
   pluginOptions___codegen = 'pluginOptions.codegen',
   pluginOptions___name = 'pluginOptions.name',
   pluginOptions___path = 'pluginOptions.path',
@@ -2239,21 +2215,21 @@ export type SitePluginPluginOptions = {
 };
 
 export type SitePluginPluginOptionsEmitPluginDocuments = {
-  readonly _home_jeremy_dev_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_plugin_documents_graphql: Maybe<Scalars['Boolean']>,
+  readonly D__dev_source_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_plugin_documents_graphql: Maybe<Scalars['Boolean']>,
 };
 
 export type SitePluginPluginOptionsEmitPluginDocumentsFilterInput = {
-  readonly _home_jeremy_dev_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_plugin_documents_graphql: Maybe<BooleanQueryOperatorInput>,
+  readonly D__dev_source_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_plugin_documents_graphql: Maybe<BooleanQueryOperatorInput>,
 };
 
 export type SitePluginPluginOptionsEmitSchema = {
-  readonly _home_jeremy_dev_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_introspection_json: Maybe<Scalars['Boolean']>,
-  readonly _home_jeremy_dev_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_schema_graphql: Maybe<Scalars['Boolean']>,
+  readonly D__dev_source_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_introspection_json: Maybe<Scalars['Boolean']>,
+  readonly D__dev_source_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_schema_graphql: Maybe<Scalars['Boolean']>,
 };
 
 export type SitePluginPluginOptionsEmitSchemaFilterInput = {
-  readonly _home_jeremy_dev_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_introspection_json: Maybe<BooleanQueryOperatorInput>,
-  readonly _home_jeremy_dev_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_schema_graphql: Maybe<BooleanQueryOperatorInput>,
+  readonly D__dev_source_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_introspection_json: Maybe<BooleanQueryOperatorInput>,
+  readonly D__dev_source_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_schema_graphql: Maybe<BooleanQueryOperatorInput>,
 };
 
 export type SitePluginPluginOptionsFilterInput = {
@@ -2317,11 +2293,6 @@ export type StockImageQueryVariables = {};
 
 export type StockImageQuery = { readonly placeholderImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluidFragment> }> }> };
 
-export type SeoQueryVariables = {};
-
-
-export type SeoQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'author'>> }> };
-
 export type SiteTitleQueryVariables = {};
 
 
@@ -2375,7 +2346,7 @@ export type GatsbyImageSharpSizes_noBase64Fragment = Pick<ImageSharpSizes, 'aspe
 
 export type GatsbyImageSharpSizes_withWebp_noBase64Fragment = Pick<ImageSharpSizes, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
 
-export type PagesQueryQueryVariables = {};
+export type SeoQueryVariables = {};
 
 
-export type PagesQueryQuery = { readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
+export type SeoQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'author'>> }> };
