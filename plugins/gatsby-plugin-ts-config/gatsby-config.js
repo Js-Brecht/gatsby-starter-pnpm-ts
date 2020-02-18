@@ -17,7 +17,7 @@ module.exports = (args) => {
     };
 
     const isProjectConfig = (fPath) => {
-        const checkPath = new RegExp(`^${path.join(configDir, `gatsby-(${gatsbyConfigs}).tsx?`).replace(/([/\\.])/g, '\\$1')}$`);
+        const checkPath = new RegExp(`^${path.join(configDir, `gatsby-(${gatsbyConfigs}).[jt]sx?`).replace(/([/\\.])/g, '\\$1')}$`);
         return checkPath.test(fPath);
     };
 
