@@ -34,14 +34,6 @@ module.exports = (args) => {
             jsx: "preserve",
         },
         files: true,
-        readFile: (fPath) => {
-            if (isProjectConfig(fPath)) {
-                const fileName = path.basename(fPath);
-                const fileBaseName = fileName.slice(0, fileName.length - path.extname(fileName).length);
-                return fs.readFileSync(path.resolve(__dirname, '.gatsby', `${fileBaseName}.ts`)).toString();
-            }
-            return fs.readFileSync(fPath).toString();
-        },
         transformers: (program) => {
             const tsTransformPaths = TsPathsTransformer(program);
             return {
