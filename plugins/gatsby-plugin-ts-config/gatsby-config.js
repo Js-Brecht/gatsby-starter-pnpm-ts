@@ -9,8 +9,6 @@ const namespace = require('./namespace');
 let tsNodeService;
 
 module.exports = (args) => {
-    console.log(JSON.stringify(args));
-
     const {
         configDir = process.cwd(),
         projectRoot = process.cwd(),
