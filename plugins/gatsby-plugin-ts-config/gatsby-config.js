@@ -2,7 +2,7 @@ const TsPathsTransformer = require('@zerollup/ts-transform-paths');
 const tsNode = require('ts-node');
 const path = require('path');
 const fs = require('fs');
-const gatsbyConfigs = ['config', 'node'].join('|');
+const gatsbyConfigs = ['config', 'node', 'browser', 'ssr'].join('|');
 
 const namespace = require('./namespace');
 
