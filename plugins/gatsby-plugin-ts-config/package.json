@@ -8,7 +8,7 @@
   },
   "author": "Jeremy Albright",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "webpack": "^4.41.6"
   }
 }
