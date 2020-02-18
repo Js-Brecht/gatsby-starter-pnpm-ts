@@ -1484,6 +1484,8 @@ export type Query_siteArgs = {
   children: Maybe<NodeFilterListInput>,
   internal: Maybe<InternalFilterInput>,
   siteMetadata: Maybe<SiteSiteMetadataFilterInput>,
+  port: Maybe<IntQueryOperatorInput>,
+  host: Maybe<StringQueryOperatorInput>,
   polyfill: Maybe<BooleanQueryOperatorInput>,
   pathPrefix: Maybe<StringQueryOperatorInput>,
   buildTime: Maybe<DateQueryOperatorInput>
@@ -1528,6 +1530,8 @@ export type Site = Node & {
   readonly children: ReadonlyArray<Node>,
   readonly internal: Internal,
   readonly siteMetadata: Maybe<SiteSiteMetadata>,
+  readonly port: Maybe<Scalars['Int']>,
+  readonly host: Maybe<Scalars['String']>,
   readonly polyfill: Maybe<Scalars['Boolean']>,
   readonly pathPrefix: Maybe<Scalars['String']>,
   readonly buildTime: Maybe<Scalars['Date']>,
@@ -1658,6 +1662,8 @@ export enum SiteFieldsEnum {
   siteMetadata___title = 'siteMetadata.title',
   siteMetadata___description = 'siteMetadata.description',
   siteMetadata___author = 'siteMetadata.author',
+  port = 'port',
+  host = 'host',
   polyfill = 'polyfill',
   pathPrefix = 'pathPrefix',
   buildTime = 'buildTime'
@@ -1669,6 +1675,8 @@ export type SiteFilterInput = {
   readonly children: Maybe<NodeFilterListInput>,
   readonly internal: Maybe<InternalFilterInput>,
   readonly siteMetadata: Maybe<SiteSiteMetadataFilterInput>,
+  readonly port: Maybe<IntQueryOperatorInput>,
+  readonly host: Maybe<StringQueryOperatorInput>,
   readonly polyfill: Maybe<BooleanQueryOperatorInput>,
   readonly pathPrefix: Maybe<StringQueryOperatorInput>,
   readonly buildTime: Maybe<DateQueryOperatorInput>,
@@ -2288,15 +2296,20 @@ export type StringQueryOperatorInput = {
   readonly glob: Maybe<Scalars['String']>,
 };
 
+export type StockImageQueryVariables = {};
+
+
+export type StockImageQuery = { readonly placeholderImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluidFragment> }> }> };
+
 export type SeoQueryVariables = {};
 
 
 export type SeoQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'author'>> }> };
 
-export type StockImageQueryVariables = {};
+export type SiteTitleQueryVariables = {};
 
 
-export type StockImageQuery = { readonly placeholderImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluidFragment> }> }> };
+export type SiteTitleQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title'>> }> };
 
 export type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 
@@ -2346,7 +2359,7 @@ export type GatsbyImageSharpSizes_noBase64Fragment = Pick<ImageSharpSizes, 'aspe
 
 export type GatsbyImageSharpSizes_withWebp_noBase64Fragment = Pick<ImageSharpSizes, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
 
-export type SiteTitleQueryVariables = {};
+export type PagesQueryQueryVariables = {};
 
 
-export type SiteTitleQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title'>> }> };
+export type PagesQueryQuery = { readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };

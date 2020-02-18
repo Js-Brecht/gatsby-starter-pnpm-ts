@@ -1,4 +1,15 @@
-query Seo {
+query StockImage {
+          placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
+              childImageSharp {
+                  fluid(maxWidth: 300) {
+                      ...GatsbyImageSharpFluid
+                  }
+              }
+          }
+      }
+  
+
+      query Seo {
           site {
               siteMetadata {
                   title
@@ -9,12 +20,10 @@ query Seo {
       }
   
 
-      query StockImage {
-          placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
-              childImageSharp {
-                  fluid(maxWidth: 300) {
-                      ...GatsbyImageSharpFluid
-                  }
+      query SiteTitle {
+          site {
+              siteMetadata {
+                  title
               }
           }
       }
@@ -229,10 +238,10 @@ fragment GatsbyImageSharpSizes_withWebp_noBase64 on ImageSharpSizes {
 }
 
 
-      query SiteTitle {
-          site {
-              siteMetadata {
-                  title
-              }
-          }
-      }
+query PagesQuery {
+  allSitePage(filter: { path: { ne: "/dev-404-page/" } }) {
+    nodes {
+      path
+    }
+  }
+}

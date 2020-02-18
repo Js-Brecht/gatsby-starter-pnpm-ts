@@ -24,6 +24,7 @@ devDependencies:
   gatsby-plugin-react-helmet: 3.1.21_cd80391e68a0f2e61c6ce7e5ac814552
   gatsby-plugin-sharp: 2.4.0_gatsby@2.19.16
   gatsby-plugin-ts: 2.2.2_gatsby@2.19.16+typescript@3.7.5
+  gatsby-plugin-ts-config: 0.0.1_gatsby@2.19.16+typescript@3.7.5
   gatsby-plugin-tsconfig-paths: 1.0.2_gatsby@2.19.16
   gatsby-plugin-typegen: 1.0.1_gatsby@2.19.16+react@16.12.0
   gatsby-source-filesystem: 2.1.46_gatsby@2.19.16
@@ -2165,10 +2166,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-5hYdAkZlcG8tOLujVDTgCT+uPX0VnpAH28gWsLfzpXYm7wP6mp5Q/gYyR7YQ0cKVJcXJnl3j2kpBan13PtQf6w==
-  /arg/4.1.2:
+  /arg/4.1.3:
     dev: true
     resolution:
-      integrity: sha512-+ytCkGcBtHZ3V2r2Z06AncYO8jz46UEamcspGoU8lHcEbpn6J77QK0vdWvChsclg/tM5XIJC5tnjmPp7Eq6Obg==
+      integrity: sha512-58S9QDqG0Xx27YwPSt9fJxivjYl432YCwfDMfZ+71RAqUrZef7LrKQZ3LHLOwCS4FLNBplP533Zx895SeOCHvA==
   /argparse/1.0.10:
     dependencies:
       sprintf-js: 1.0.3
@@ -5497,6 +5498,8 @@ packages:
     engines:
       node: '>=4.0'
     optional: true
+    os:
+      - darwin
     requiresBuild: true
     resolution:
       integrity: sha512-+ux3lx6peh0BpvY0JebGyZoiR4D+oYzdPZMKJwkZ+sFkNJzpL7tXc/wehS49gUAxg3tmMHPHZkA8JU2rhhgDHw==
@@ -5752,6 +5755,17 @@ packages:
       gatsby: '>2.0.15'
     resolution:
       integrity: sha512-PmifXRuy0R16uoWPIMvjHgoPdkG30uUS9r+XYAp+WW4Q7oWy1q0R2tia3rcdwvGeOsxX98W95jy8QTqhQ3BDFQ==
+  /gatsby-plugin-ts-config/0.0.1_gatsby@2.19.16+typescript@3.7.5:
+    dependencies:
+      gatsby: 2.19.16_e952c98258ca016dac686d1f5d845607
+      ts-node: 8.6.2_typescript@3.7.5
+      webpack: 4.41.6_webpack@4.41.6
+    dev: true
+    peerDependencies:
+      gatsby: ~2.x.x
+      typescript: '*'
+    resolution:
+      integrity: sha512-j5lZUYcVJOF/rnjNEZfE11s6zTAv7WiCuv8CDerWY6H9o7aNf/aLJrhyBADf2Zh4R7ydzJbCDvI7unsuiL9/+A==
   /gatsby-plugin-ts/2.2.2_gatsby@2.19.16+typescript@3.7.5:
     dependencies:
       fork-ts-checker-webpack-plugin: 4.0.3
@@ -11717,7 +11731,7 @@ packages:
       integrity: sha512-Dd9FekWuABGgjE1g0TlQJ+4dFUfYGbYcs52/HQObE0ZmUNjQlmLAS7xXsSzy23AMaMwipsx5sNHvoEpT2CZq1g==
   /ts-node/8.6.2_typescript@3.7.5:
     dependencies:
-      arg: 4.1.2
+      arg: 4.1.3
       diff: 4.0.2
       make-error: 1.3.5
       source-map-support: 0.5.16
@@ -12751,6 +12765,7 @@ specifiers:
   gatsby-plugin-react-helmet: ^3.0.6
   gatsby-plugin-sharp: ^2.0.20
   gatsby-plugin-ts: ^2.2.2
+  gatsby-plugin-ts-config: ^0.0.1
   gatsby-plugin-tsconfig-paths: ^1.0.2
   gatsby-plugin-typegen: ^1.0.1
   gatsby-source-filesystem: ^2.0.20

@@ -1,1 +1,0 @@
-module.exports = Symbol.for('gatsby-plugin-ts-config');
