@@ -6,8 +6,6 @@ const gatsbyConfigs = ['config', 'node', 'browser', 'ssr'].join('|');
 
 const namespace = require('./namespace');
 
-let tsNodeService;
-
 module.exports = (args) => {
     const {
         configDir = process.cwd(),
@@ -23,7 +21,7 @@ module.exports = (args) => {
         return checkPath.test(fPath);
     };
 
-    tsNodeService = tsNode.register({
+    const tsNodeService = tsNode.register({
         project: path.join(projectRoot, 'tsconfig.json'),
         compilerOptions: {
             module: "commonjs",
