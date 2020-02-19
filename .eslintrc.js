@@ -15,6 +15,7 @@ module.exports = {
         "@typescript-eslint/ban-ts-ignore": "off",
         "@typescript-eslint/no-empty-interface": "off",
         "@typescript-eslint/no-non-null-assertion": "off",
+        "@typescript-eslint/camelcase": "off",
         "graphql/template-strings": [
             "error",
             {
