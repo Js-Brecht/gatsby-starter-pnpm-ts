@@ -326,6 +326,26 @@
                 "defaultValue": null
               },
               {
+                "name": "blksize",
+                "description": "",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "IntQueryOperatorInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "blocks",
+                "description": "",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "IntQueryOperatorInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
                 "name": "publicURL",
                 "description": "",
                 "type": {
@@ -761,6 +781,26 @@
                 "type": {
                   "kind": "INPUT_OBJECT",
                   "name": "FloatQueryOperatorInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "blksize",
+                "description": "",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "IntQueryOperatorInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "blocks",
+                "description": "",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "IntQueryOperatorInput",
                   "ofType": null
                 },
                 "defaultValue": null
@@ -1291,26 +1331,6 @@
                 "type": {
                   "kind": "INPUT_OBJECT",
                   "name": "SiteSiteMetadataFilterInput",
-                  "ofType": null
-                },
-                "defaultValue": null
-              },
-              {
-                "name": "port",
-                "description": "",
-                "type": {
-                  "kind": "INPUT_OBJECT",
-                  "name": "IntQueryOperatorInput",
-                  "ofType": null
-                },
-                "defaultValue": null
-              },
-              {
-                "name": "host",
-                "description": "",
-                "type": {
-                  "kind": "INPUT_OBJECT",
-                  "name": "StringQueryOperatorInput",
                   "ofType": null
                 },
                 "defaultValue": null
@@ -3751,6 +3771,30 @@
             },
             "isDeprecated": true,
             "deprecationReason": "Use `birthTime` instead"
+          },
+          {
+            "name": "blksize",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "blocks",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
           },
           {
             "name": "publicURL",
@@ -6680,6 +6724,26 @@
             "defaultValue": null
           },
           {
+            "name": "blksize",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "IntQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "blocks",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "IntQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
             "name": "publicURL",
             "description": "",
             "type": {
@@ -6973,6 +7037,18 @@
           },
           {
             "name": "birthtimeMs",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "blksize",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "blocks",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -9314,6 +9390,30 @@
             "deprecationReason": "Use `birthTime` instead"
           },
           {
+            "name": "blksize",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "blocks",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "id",
             "description": null,
             "args": [],
@@ -9710,6 +9810,26 @@
             "defaultValue": null
           },
           {
+            "name": "blksize",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "IntQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "blocks",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "IntQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
             "name": "id",
             "description": "",
             "type": {
@@ -9983,6 +10103,18 @@
           },
           {
             "name": "birthtimeMs",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "blksize",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "blocks",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -11194,7 +11326,7 @@
         "fields": null,
         "inputFields": [
           {
-            "name": "D__dev_source_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_introspection_json",
+            "name": "_home_jeremy_dev_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_introspection_json",
             "description": "",
             "type": {
               "kind": "INPUT_OBJECT",
@@ -11204,7 +11336,7 @@
             "defaultValue": null
           },
           {
-            "name": "D__dev_source_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_schema_graphql",
+            "name": "_home_jeremy_dev_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_schema_graphql",
             "description": "",
             "type": {
               "kind": "INPUT_OBJECT",
@@ -11225,7 +11357,7 @@
         "fields": null,
         "inputFields": [
           {
-            "name": "D__dev_source_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_plugin_documents_graphql",
+            "name": "_home_jeremy_dev_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_plugin_documents_graphql",
             "description": "",
             "type": {
               "kind": "INPUT_OBJECT",
@@ -12131,7 +12263,7 @@
         "description": null,
         "fields": [
           {
-            "name": "D__dev_source_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_introspection_json",
+            "name": "_home_jeremy_dev_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_introspection_json",
             "description": null,
             "args": [],
             "type": {
@@ -12143,7 +12275,7 @@
             "deprecationReason": null
           },
           {
-            "name": "D__dev_source_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_schema_graphql",
+            "name": "_home_jeremy_dev_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_schema_graphql",
             "description": null,
             "args": [],
             "type": {
@@ -12166,7 +12298,7 @@
         "description": null,
         "fields": [
           {
-            "name": "D__dev_source_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_plugin_documents_graphql",
+            "name": "_home_jeremy_dev_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_plugin_documents_graphql",
             "description": null,
             "args": [],
             "type": {
@@ -13428,19 +13560,19 @@
             "deprecationReason": null
           },
           {
-            "name": "pluginCreator___pluginOptions___emitSchema___D__dev_source_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_introspection_json",
+            "name": "pluginCreator___pluginOptions___emitSchema____home_jeremy_dev_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_introspection_json",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "pluginCreator___pluginOptions___emitSchema___D__dev_source_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_schema_graphql",
+            "name": "pluginCreator___pluginOptions___emitSchema____home_jeremy_dev_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_schema_graphql",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "pluginCreator___pluginOptions___emitPluginDocuments___D__dev_source_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_plugin_documents_graphql",
+            "name": "pluginCreator___pluginOptions___emitPluginDocuments____home_jeremy_dev_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_plugin_documents_graphql",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -15375,30 +15507,6 @@
             "deprecationReason": null
           },
           {
-            "name": "port",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "Int",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "host",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "polyfill",
             "description": null,
             "args": [],
@@ -15586,26 +15694,6 @@
             "type": {
               "kind": "INPUT_OBJECT",
               "name": "SiteSiteMetadataFilterInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "port",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "IntQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "host",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringQueryOperatorInput",
               "ofType": null
             },
             "defaultValue": null
@@ -16222,18 +16310,6 @@
           },
           {
             "name": "siteMetadata___author",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "port",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "host",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -17218,19 +17294,19 @@
             "deprecationReason": null
           },
           {
-            "name": "pluginOptions___emitSchema___D__dev_source_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_introspection_json",
+            "name": "pluginOptions___emitSchema____home_jeremy_dev_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_introspection_json",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "pluginOptions___emitSchema___D__dev_source_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_schema_graphql",
+            "name": "pluginOptions___emitSchema____home_jeremy_dev_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_schema_graphql",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "pluginOptions___emitPluginDocuments___D__dev_source_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_plugin_documents_graphql",
+            "name": "pluginOptions___emitPluginDocuments____home_jeremy_dev_gatsby_gatsby_starter_pnpm_ts__gatsby_graphql_plugin_documents_graphql",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
