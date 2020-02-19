@@ -50,7 +50,7 @@
     "gatsby-plugin-react-helmet": "^3.0.6",
     "gatsby-plugin-sharp": "^2.0.20",
     "gatsby-plugin-ts": "^2.2.2",
-    "gatsby-plugin-ts-config": "^0.0.4",
+    "gatsby-plugin-ts-config": "^0.0.5",
     "gatsby-plugin-tsconfig-paths": "^1.0.2",
     "gatsby-plugin-typegen": "^1.0.1",
     "gatsby-source-filesystem": "^2.0.20",

@@ -24,7 +24,7 @@ devDependencies:
   gatsby-plugin-react-helmet: 3.1.22_03bcbe8c895e388ada88618e257a5a5d
   gatsby-plugin-sharp: 2.4.5_gatsby@2.19.18
   gatsby-plugin-ts: 2.2.2_gatsby@2.19.18+typescript@3.7.5
-  gatsby-plugin-ts-config: 0.0.4_gatsby@2.19.18+typescript@3.7.5
+  gatsby-plugin-ts-config: 0.0.5_gatsby@2.19.18+typescript@3.7.5
   gatsby-plugin-tsconfig-paths: 1.0.2_gatsby@2.19.18
   gatsby-plugin-typegen: 1.1.1_gatsby@2.19.18+react@16.12.0
   gatsby-source-filesystem: 2.1.48_gatsby@2.19.18
@@ -5660,7 +5660,7 @@ packages:
       gatsby: '>2.0.15'
     resolution:
       integrity: sha512-O2FZcUd78aKNR7Hbommrbc5igW32U2MnenA/Oc55sklFUF+I1fu4N6zMoHfh7sVtWCqZEbQiNO310Zl8jstD5g==
-  /gatsby-plugin-ts-config/0.0.4_gatsby@2.19.18+typescript@3.7.5:
+  /gatsby-plugin-ts-config/0.0.5_gatsby@2.19.18+typescript@3.7.5:
     dependencies:
       gatsby: 2.19.18_7f54c0480e324cfe36a22a00f66827dc
       ts-node: 8.6.2_typescript@3.7.5
@@ -5670,7 +5670,7 @@ packages:
       gatsby: ~2.x.x
       typescript: '*'
     resolution:
-      integrity: sha512-kqmfUD8WJutsf643JIZqhmC5qIMby9chOO0eZGG54PygmCkaq/3rNsDziwtrmrWVoH0UZ+zSqxACtbcteaiq/g==
+      integrity: sha512-jiYa4CH5vgEwW20m+PdP+i2E8Py6tLJn1qJXfPOZ53GDXhPbDvwUPJseAtumn/RQVSTzadJzmow23i729k/QGA==
   /gatsby-plugin-ts/2.2.2_gatsby@2.19.18+typescript@3.7.5:
     dependencies:
       fork-ts-checker-webpack-plugin: 4.0.4
@@ -12654,7 +12654,7 @@ specifiers:
   gatsby-plugin-react-helmet: ^3.0.6
   gatsby-plugin-sharp: ^2.0.20
   gatsby-plugin-ts: ^2.2.2
-  gatsby-plugin-ts-config: ^0.0.4
+  gatsby-plugin-ts-config: ^0.0.5
   gatsby-plugin-tsconfig-paths: ^1.0.2
   gatsby-plugin-typegen: ^1.0.1
   gatsby-source-filesystem: ^2.0.20
