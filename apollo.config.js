@@ -1,6 +1,6 @@
 module.exports = {
     client: {
-        name: 'search2hope',
+        name: 'gatsby-starter-pnpm-ts',
         tagName: 'graphql',
         includes: [
             `${__dirname}/src/**/*.{ts,tsx}`,
