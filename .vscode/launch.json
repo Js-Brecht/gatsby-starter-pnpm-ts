@@ -18,7 +18,8 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "smartStep": true
+      "smartStep": true,
+      "console": "integratedTerminal"
     },
     {
       "type": "node",
