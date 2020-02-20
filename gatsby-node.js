@@ -5,4 +5,4 @@
  */
 
 // You can delete this file if you're not using it
-module.exports = require('./gatsby-ts')('./.gatsby/gatsby-node');
+module.exports = require('./.gatsby/gatsby-node')(__dirname);
