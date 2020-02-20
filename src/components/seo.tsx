@@ -39,7 +39,7 @@ const SEO: React.FC<ISEOProps> = ({ description = '', lang = 'en', meta = [], ti
                 lang,
             }}
             title={title}
-            titleTemplate={`%s | ${siteAuthor}`}
+            titleTemplate={`%s | ${site?.siteMetadata?.title}`}
             meta={[
                 {
                     name: `description`,
