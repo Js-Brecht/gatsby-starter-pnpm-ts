@@ -5,7 +5,7 @@ module.exports = {
         includes: [
             `${__dirname}/src/**/*.{ts,tsx}`,
             `${__dirname}/.gatsby/graphql/plugin-documents.graphql`,
-        ], // eslint-disable-line
+        ], // eslint-disable-line graphql/template-strings
         service: {
             name: 'GatsbyJS',
             localSchemaFile: `${__dirname}/.gatsby/graphql/schema.graphql`,
