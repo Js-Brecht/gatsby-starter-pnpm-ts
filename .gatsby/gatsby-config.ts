@@ -24,8 +24,7 @@ type IGatsbyPluginOptions<TName extends string = string, TOptions extends Record
     options: TOptions;
 }
 
-// @ts-ignore
-export = (projectRoot: string): IGatsbyConfiguration<
+export default (projectRoot: string): IGatsbyConfiguration<
     | IGatsbyPluginOptions<'gatsby-plugin-pnpm', IPnpmPluginOptions>
     // Add additional plugin types here
 > => ({
