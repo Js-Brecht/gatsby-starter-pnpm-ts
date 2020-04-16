@@ -1,8 +1,12 @@
 import { IPluginOptions as IPnpmPluginOptions } from 'gatsby-plugin-pnpm';
 import { ITSConfigFn, IMergePluginOptions } from 'gatsby-plugin-ts-config';
+import { PluginOptions as ITypegenPluginOptions } from 'gatsby-plugin-typegen/types';
+import { FileSystemConfig } from 'gatsby-source-filesystem';
 
 const gatsbyConfig: ITSConfigFn<'config',
     | IMergePluginOptions<'gatsby-plugin-pnpm', IPnpmPluginOptions>
+    | IMergePluginOptions<'gatsby-plugin-typegen', ITypegenPluginOptions>
+    | FileSystemConfig
     // Add additional plugin types here
 > = ({
     projectRoot
