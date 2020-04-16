@@ -205,12 +205,3 @@ fragment GatsbyImageSharpSizes_withWebp_noBase64 on ImageSharpSizes {
   srcSetWebp
   sizes
 }
-
-
-query PagesQuery {
-  allSitePage(filter: { path: { ne: "/dev-404-page/" } }) {
-    nodes {
-      path
-    }
-  }
-}

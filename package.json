@@ -24,7 +24,8 @@
     "start": "npm run develop"
   },
   "dependencies": {
-    "gatsby": "^2.19.16",
+    "@yarnpkg/plugin-interactive-tools": "2.0.0-rc.17",
+    "gatsby": "^2.19.32",
     "gatsby-image": "^2.2.40",
     "gatsby-link": "^2.2.29",
     "react": "^16.12.0",
@@ -40,6 +41,7 @@
     "@typescript-eslint/eslint-plugin": "^2.20.0",
     "@typescript-eslint/parser": "^2.20.0",
     "@typescript-eslint/typescript-estree": "^2.20.0",
+    "@yarnpkg/pnpify": "^2.0.0-rc.18",
     "@zerollup/ts-transform-paths": "^1.7.11",
     "eslint": "^6.8.0",
     "eslint-plugin-graphql": "^3.1.1",
@@ -49,14 +51,23 @@
     "gatsby-plugin-pnpm": "^1.2.2",
     "gatsby-plugin-react-helmet": "^3.0.6",
     "gatsby-plugin-sharp": "^2.0.20",
-    "gatsby-plugin-ts": "^2.2.2",
+    "gatsby-plugin-ts": "^2.4.0",
+    "gatsby-plugin-ts-config": "^0.2.2",
     "gatsby-plugin-tsconfig-paths": "^1.0.2",
-    "gatsby-plugin-typegen": "^1.0.1",
+    "gatsby-plugin-typegen": "^2.1.0",
     "gatsby-source-filesystem": "^2.0.20",
     "gatsby-transformer-sharp": "^2.1.13",
     "ts-graphql-plugin": "^1.10.2",
     "ts-node": "^8.6.2",
     "tslib": "^1.10.0",
     "typescript": "^3.7.5"
+  },
+  "resolutions": {
+    "gatsby-plugin-ts-config": "portal:/home/jeremy/dev/gatsby/gatsby-plugin-ts-config"
+  },
+  "dependenciesMeta": {
+    "gatsby-plugin-ts": {
+      "unplugged": true
+    }
   }
 }

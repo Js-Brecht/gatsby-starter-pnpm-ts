@@ -1,33 +1,16 @@
-import { GatsbyConfig } from 'gatsby';
 import { IPluginOptions as IPnpmPluginOptions } from 'gatsby-plugin-pnpm';
+import { ITSConfigFn, IMergePluginOptions } from 'gatsby-plugin-ts-config';
+import { PluginOptions as ITypegenPluginOptions } from 'gatsby-plugin-typegen/types';
+import { FileSystemConfig } from 'gatsby-source-filesystem';
 
-/**
- * This is just an interface used to extend the default GatsbyConfig interface
- * with the additional plugin definitions
- */
-interface IGatsbyConfiguration<TPluginDefinition extends IGatsbyPluginOptions = IGatsbyPluginOptions> extends GatsbyConfig {
-    plugins?: Array<
-        | string
-        | IGatsbyPluginOptions
-        | TPluginDefinition
-    >;
-}
-
-/**
- * For other plugins that have types defined for their options,
- * define them using this interface, and include the definition in
- * the `exports` return type
- */
-type IGatsbyPluginOptions<TName extends string = string, TOptions extends Record<string, unknown> = Record<string, unknown>> = {
-    resolve: TName;
-    options: TOptions;
-}
-
-// @ts-ignore
-export = (projectRoot: string): IGatsbyConfiguration<
-    | IGatsbyPluginOptions<'gatsby-plugin-pnpm', IPnpmPluginOptions>
+const gatsbyConfig: ITSConfigFn<'config',
+    | IMergePluginOptions<'gatsby-plugin-pnpm', IPnpmPluginOptions>
+    | IMergePluginOptions<'gatsby-plugin-typegen', ITypegenPluginOptions>
+    | FileSystemConfig
     // Add additional plugin types here
-> => ({
+> = ({
+    projectRoot
+}) => ({
     siteMetadata: {
         title: `Gatsby PNPM/Typescript Starter`,
         description: `Kick off your next, great Gatsby project with this starter. This starter ships with the main Gatsby configuration files you might need, including support for PNPM and Typescript.  It also includes a file structure that is conducive for developing your Gatsby configuration files with Typescript`,
@@ -88,3 +71,5 @@ export = (projectRoot: string): IGatsbyConfiguration<
         // `gatsby-plugin-offline`,
     ]
 });
+
+export default gatsbyConfig;
