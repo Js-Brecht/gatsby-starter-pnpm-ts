@@ -62,9 +62,6 @@
     "tslib": "^1.10.0",
     "typescript": "^3.7.5"
   },
-  "resolutions": {
-    "gatsby-plugin-ts-config": "portal:/home/jeremy/dev/gatsby/gatsby-plugin-ts-config"
-  },
   "dependenciesMeta": {
     "gatsby-plugin-ts": {
       "unplugged": true
